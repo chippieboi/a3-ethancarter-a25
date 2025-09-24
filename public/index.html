@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>CS4241 Assignment 3</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Car database with options to add, modify, and delete entries with separate database for each user">
+
+    <link 
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" 
+      rel="stylesheet" 
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" 
+      crossorigin="anonymous">
+    <noscript>
+      <link rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+            integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+            crossorigin="anonymous">
+    </noscript>
+
+    <script src="js/main.js" defer></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Ojuju:wght@200..800&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap">
+    <link href="https://fonts.googleapis.com/css2?family=Ojuju:wght@200..800&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap" rel="stylesheet">
+
+    
+    
+    <!-- get rid of favicon error -->
+    <link rel="icon" href="data:;base64,iVBORw0KGgo=">
+  </head>
+  <body class="bg-dark text-light">
+    <div class="container py-5">
+      <div class="d-flex justify-content-between align-items-center mb-4">
+        <h1>Add Info:</h1>
+        <button id="logout" class="btn btn-danger">Log Out</button>
+      </div>
+      <form class="card bg-secondary text-light p-4 shadow">
+        <!-- <input type="text" id="yourname" value="your name here"> -->
+        <div class="row g-3">
+          <div class="col-md-4">
+            <label for="model" class="form-label">Model: </label>
+            <input type="text" id="model" class="form-control bg-dark text-light border-light" value="">
+          </div>
+          
+          <div class="col-md-4">
+            <label for="year" class="form-label">Year: </label>
+            <input type="text" id="year" class="form-control bg-dark text-light border-light" value="">
+          </div>
+
+          <div class="col-md-4">
+            <label for="mpg" class="form-label">MPG: </label>
+            <input type="text" id="mpg" class="form-control bg-dark text-light border-light" value="">
+          </div>
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label">Fuel type:</label>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="fuel" id="gas" value="gas" checked>
+            <label class="form-check-label" for="gas">Gas</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="fuel" id="electric" value="electric">
+            <label class="form-check-label" for="electric">Electric</label>
+          </div>
+        </div>
+
+        <div class="mb-3">
+          <label for="color" class="form-label">Color</label>
+          <select id="color" class="form-select bg-dark text-light border-light">
+            <option value="red">Red</option>
+            <option value="blue">Blue</option>
+            <option value="black">Black</option>
+            <option value="white">White</option>
+            <option value="white">Orange</option>
+            <option value="white">Gray</option>
+            <option value="white">Tan</option>
+            <option value="white">Green</option>
+          </select>
+        </div>
+
+        <div class="mt-3">
+          <button id="submit" class="btn btn-primary me-2">submit</button>
+          <button id="viewData" class="btn btn-secondary btn-outline-light">view data</button>
+        </div>
+
+        <br><br>
+      </form>
+
+      <div class="mt-4">
+        <table id="dataTable" class="table table-bordered table-striped table-dark text-center"></table>
+      </div>
+
+    </div>
+  </body>
+</html>
