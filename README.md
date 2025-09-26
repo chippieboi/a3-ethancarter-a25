@@ -42,7 +42,7 @@ For some reason, running Lighthouse on the render app makes everything crash, so
 <img width="1343" height="297" alt="image" src="https://github.com/user-attachments/assets/47efb57c-c7b0-4684-b37f-165f1100fb31" />
 
 
-##AI Usage
+## AI Usage
    For A3, I mainly used Gemini (from Google searches) and ChatGPT for debugging help. I would Google things like "Express server example" and read the Gemini blurb, and go to a website with examples.
    Same deal with MongoDB, though a good chunk of the MongoDB code came from the Atlas setup process. ChatGPT was mainly used for debugging and figuring out some of the syntax errors I made with requests,
    JSON passes, and a general lack of specific knowledge of JS.
